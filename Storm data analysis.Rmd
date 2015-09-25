@@ -2,7 +2,9 @@
 title: "Analysis of Weather Data from USA"
 author: "Stefan Kosztolanyi"
 date: "Created on 25th of September, 2015"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 ##Synopsis
 This report is created using Rstuio, knitr and ggplot2 packages in a R markdown file.
@@ -26,7 +28,7 @@ I will be showing all the code and plots in this document openly, therefore I wa
 ```{r environment,echo=TRUE}
 library(knitr)
 require("knitr")
-opts_chunk$set(echo=TRUE, results="hold")
+opts_chunk$set(echo=TRUE, results="asis")
 ```
 
 I will be making the plots in ggplot2, so I can load the package:
@@ -147,4 +149,4 @@ In this short exploration of a large USA weather dataset, we tried to answer two
 2. Which weather does the most damage to property and crops?
 
 After some data filtering, we were able to answer these questions and graphically visualize them.
-To summarize again our results, the most harmful weather is tornado, the most damaging to property is thunderstorm followed by floods and the most damaging to crops is hail.
+To summarize again our results, the most harmful weather is tornado, the most damaging to property is thunderstorm followed by floods and the most damaging to crops is drought.
